@@ -4,9 +4,9 @@
                 {{ $slot }}
             </div>
             <div class="col-span-2">
-                
+
                 @if (isset($side))
-                    {{ $side }} 
+                    {{ $side }}
                 @endif
 
             </div>

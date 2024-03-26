@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PostIndexController;
+use App\Http\Controllers\PostShowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,8 @@ use \App\Http\Controllers\PostIndexController;
 |
 */
 
-Route::get('/', action:PostIndexController::class ) ->name('home');
+Route::get('/', action: PostIndexController::class)->name('home');
+Route::get('/posts/{post}', action: PostShowController::class)->name('posts.show');
 
 
 
@@ -25,4 +27,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
