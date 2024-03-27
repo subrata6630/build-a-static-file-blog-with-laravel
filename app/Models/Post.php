@@ -3,8 +3,8 @@
 namespace App\Models;
 
 
-use Spatie\Sheets\Sheets;
+use Spatie\Sheets\Sheet;
 
-class Post extends Sheets
+class Post extends Sheet
 {
 }

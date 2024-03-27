@@ -13,15 +13,9 @@ class PostIndexController extends Controller
      * Handle the incoming request.
      */
     public function __invoke(Request $request)
-
-
-    // dd(Sheets::collection(name: 'posts')->all());
-    //return view (view: 'posts.index');
-
-
     {
-        return view('posts.index', [
-            'posts' => Sheets::collection(name: 'posts')->all()
-        ]);
+
+        dd(Sheets::collection(name: 'posts')->all());
+        return view(view: 'posts.index');
     }
 }
