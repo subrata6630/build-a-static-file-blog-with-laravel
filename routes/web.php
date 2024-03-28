@@ -16,8 +16,8 @@ use App\Http\Controllers\PostShowController;
 |
 */
 
-Route::get('/', action: PostIndexController::class)->name('home');
-Route::get('/posts/{post}', action: PostShowController::class)->name('posts.show');
+Route::get('/', action: PostIndexController::class)->name(name: 'home');
+Route::get('/posts/{post}', action: PostShowController::class)->name(name: 'posts.show');
 
 
 
