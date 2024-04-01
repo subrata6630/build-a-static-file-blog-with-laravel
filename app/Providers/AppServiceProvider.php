@@ -29,13 +29,16 @@ class AppServiceProvider extends ServiceProvider
 
             // dd($page);
 
-            return new LengthAwarePaginator(
+            $paginator = new LengthAwarePaginator(
                 $this->forPage($page, $perPage),
                 $this->count(),
                 $perPage,
                 $page,
                 $optional
             );
+
+            $paginator->setPath(request()->url());
+            return $paginator;
         });
     }
 }

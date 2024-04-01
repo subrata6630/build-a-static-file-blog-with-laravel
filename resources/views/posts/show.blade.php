@@ -1,12 +1,14 @@
 <x-post-layout>
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900 prose space-y-6">
-                <h1 class="not-prose">  {{ $post->title }} </h1>
+                <h1 class="font-bold"> {{ $post->title }} </h1>
                 <div>{{ $post->contents }}</div>
 
                 <x-post-meta :post="$post" />
             </div>
         </div>
+
+
 
     <x-slot name="side">
         <div class="bg-white  overflow-hidden shadow-sm sm:rounded-lg">

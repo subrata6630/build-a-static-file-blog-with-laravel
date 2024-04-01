@@ -1,6 +1,6 @@
 <x-post-layout>
 
-    @if (count($posts))
+    @if (count($posts ?? []))
         @foreach ($posts as $post )
             <x-post-list-item :post="$post" />
         @endforeach
@@ -8,14 +8,18 @@
     @else
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
-                No data yet. Please come back later!
+                No data yet.
             </div>
         </div>
     @endif
 
 
+    {{ $posts->links() }}
+
+
+
     <x-slot name="side">
-        <div class="bg-white  overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
                 Sidebar
             </div>

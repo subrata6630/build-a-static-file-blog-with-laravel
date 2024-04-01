@@ -21,6 +21,7 @@
     </div>
 @endif
 
+{{ $posts->links() }}
 
 <x-slot name="side">
     <div class="bg-white  overflow-hidden shadow-sm sm:rounded-lg">
