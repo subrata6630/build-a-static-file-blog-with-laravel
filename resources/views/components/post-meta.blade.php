@@ -8,7 +8,8 @@
                 @foreach ($post->tags as $tag)
 
                 <li>
-                    <a href="" class="text-blue-500 text-sm">{{ $tag }}</a>
+                    <a href="{{ route('tags.show', ['tag' => $tag]) }}" class="text-blue-500 text-sm">{{ Str::title($tag) }}</a>
+
                 </li>
 
                 @endforeach

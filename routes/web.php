@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PostIndexController;
 use App\Http\Controllers\PostShowController;
+use App\Http\Controllers\TagShowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\PostShowController;
 
 Route::get('/', action: PostIndexController::class)->name(name: 'home');
 Route::get('/posts/{post}', action: PostShowController::class)->name(name: 'posts.show');
+Route::get('/tags/{tag}', action: TagShowController::class)->name(name: 'tags.show');
 
 
 
