@@ -19,10 +19,6 @@
 
 
     <x-slot name="side">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 text-gray-900">
-                Sidebar
-            </div>
-        </div>
+        <x-side-ber/>
     </x-slot>
 </x-post-layout>

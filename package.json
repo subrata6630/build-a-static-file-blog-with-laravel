@@ -16,6 +16,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "shiki": "^1.2.3",
         "tailwindcss-typography": "^3.1.0"
     }
 }
